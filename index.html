@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faste Food</title>
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <style>
+        :root {
+    --primary-color: orange;
+    --dark-color: #000;
+    --light-color: #ffffff;
+    --text-color: #fffbfb;
+    --border-color: #504c4c;
+    --header-height: 70px;
+    
+}
+
+
+
+body {
+     margin:0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
+    color: var(--text-color);
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========== HEADER STYLES ========== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(129, 127, 127, 0.87);
+    backdrop-filter: rgba(110, 110, 110, 0.7);
+   
+}
+
+.titre {
+    color: var(--primary-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: clamp(16px, 4vw, 28px);
+    font-weight: bold;
+}
+
+.titre span {
+    color: var(--dark-color);
+}
+
+
+.liens {
+    display: flex;
+    gap: 12px;
+   
+}
+
+.liens a {
+    color: var(--light-color);
+    font-size: clamp(11px, 2.5vw, 16px);
+    transition: 0.3s ease;
+   
+}
+
+.liens a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+
+
+/* ========== HERO/ACCUEIL SECTION ========== */
+.ecran {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(27, 21, 21, 0.5), rgba(34, 27, 27, 0.5)), url("1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.affiche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light-color);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.affiche h1 {
+    font-size: clamp(24px, 6vw, 60px);
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.affiche p {
+    font-size: clamp(14px, 3vw, 18px);
+    color: rgb(219, 212, 212);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button button {
+    height: 45px;
+    width: 140px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button .menu {
+    background-color: orangered;
+    color: var(--light-color);
+}
+
+.button .menu:hover {
+    background-color: #ff6600;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.button .contact {
+    background-color: rgba(255, 187, 0, 0.9);
+    color: var(--dark-color);
+}
+
+.button .contact:hover {
+    background-color: rgba(255, 187, 0, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 187, 0, 0.4);
+}
+
+/* ========== NOTRE HISTOIRE SECTION ========== */
+.histoir {
+     display: flex;
+    flex-direction:row;
+    margin-top: 5%;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.ecrit {
+    padding: 0 15px;
+}
+
+.ecrit h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ecrit p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ========== NOTRE MENU SECTION ========== */
+.notre-titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.notre-titre h1 {
+    font-size: clamp(28px, 6vw, 50px);
+    text-align: center;
+}
+
+.menu-liens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 50px;
+    width: 30%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.menu-liens a {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--dark-color);
+    
+}
+
+.menu-liens a:hover {
+     background-color: var(--dark-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.liens2 {
+    background-color: local;
+}
+
+/* ========== MENU CARDS ========== */
+.carte1{
+    margin: 10px;
+    width: 400px;
+    text-align: center;
+}
+.carte-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.carte1 img{
+    width: 80%;
+    height: 250px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+.carte1 img:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+.commander {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    color: var(--primary-color);
+}
+
+.commander h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.commander button {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.commander button:hover {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+/* ========== GALERIE SECTION ========== */
+.gallerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.photos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 16px;
+    transition: 0.3s;
+}
+
+.photos1 {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 80px;
+    height: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1.2px solid #eee;
+    box-shadow: 
+        5px 10px 15px rgba(0, 0, 0, 0.4), 
+        -2px -5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.8s ease;
+}
+
+
+.photos1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.photos1 span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    translate: -50%;
+    width: 80%;
+    text-align: center;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    scale: 0.85;
+    transition: 0.4s;
+}
+
+.photos1 span h2 {
+    font-size: 16px;
+    color: var(--light-color);
+    margin: 5px 0;
+}
+
+.photos1 span p {
+    color: #ddd;
+    font-size: 12px;
+}
+
+.photos1::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.photos1:hover {
+    flex: 0 1 100%;
+    height: 300px;
+}
+
+.photos1:hover::before {
+    opacity: 1;
+}
+
+.photos1:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* ========== AVIS CLIENT SECTION ========== */
+.avis {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.avis h1 {
+    font-size: clamp(28px, 6vw, 45px);
+}
+
+.commentaire-client {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.commentaire {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    min-height: 250px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.commentaire:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profil img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.profil h3 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.etoiles {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    font-size: 18px;
+    color: gold;
+}
+
+.commentaire p {
+    font-size: 13px;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.commentaire:hover p {
+    color: var(--dark-color);
+}
+
+/* ========== CONTACT SECTION ========== */
+.nous-contacter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+    padding: 20px;
+    background-color: #444;
+}
+
+.Nous-ecrire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.titre2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.Nous-ecrire form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.Nous-ecrire form input,
+.Nous-ecrire form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.Nous-ecrire form input:focus,
+.Nous-ecrire form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.3);
+}
+
+.Nous-ecrire form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(255, 102, 0);
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+/* ========== FOOTER STYLES ========== */
+.bnt2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border: none;
+}
+
+.bnt2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+}
+
+.information {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.information h3 {
+    margin-bottom: 15px;
+}
+
+.information p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: var(--light-color);
+}
+
+/* ================================================
+   📱 MOBILE - SMALL DEVICES (max-width: 480px)
+   ================================================ */
+@media (max-width: 480px) {
+    header {
+        height: 50px;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
+    .titre {
+        font-size: 11px;
+    }
+
+    .liens {
+        gap: 8px;
+    }
+
+    .liens a {
+        font-size: 11px;
+    }
+
+    .ecran {
+        margin-top: 0;
+    }
+
+    .button button {
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .carte-menu {
+        gap: 15px;
+    }
+
+    .carte1 {
+        max-width: 100%;
+    }
+
+    .photos1 {
+        max-width: 150px;
+        height: 200px;
+    }
+
+    .commentaire {
+        max-width: 100%;
+    }
+
+    .nous-contacter {
+        gap: 20px;
+    }
+
+    .Nous-ecrire {
+        max-width: 100%;
+    }
+
+    .menu-liens {
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+/* ================================================
+   📱 TABLET - SMALL (481px - 576px)
+   ================================================ */
+@media (min-width: 481px) and (max-width: 576px) {
+    header {
+        height: 55px;
+    }
+
+    .titre {
+        font-size: 13px;
+    }
+
+    .liens {
+        gap: 10px;
+    }
+
+    .button button {
+        width: 130px;
+    }
+
+    .carte1 {
+        max-width: calc(50% - 10px);
+    }
+
+    .photos1 {
+        max-width: 180px;
+    }
+
+    .commentaire {
+        max-width: 200px;
+    }
+}
+
+/* ================================================
+   📱 TABLET - MEDIUM (577px - 768px)
+   ================================================ */
+@media (min-width: 577px) and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .titre {
+        font-size: 15px;
+    }
+
+    .liens {
+        gap: 12px;
+    }
+
+    .liens a {
+        font-size: 13px;
+    }
+
+    .affiche h1 {
+        font-size: 36px;
+    }
+
+    .affiche p {
+        font-size: 16px;
+    }
+
+    .button button {
+        width: 140px;
+        height: 42px;
+    }
+
+    .histoir {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .images {
+        flex: 1;
+    }
+
+    .images img {
+        max-height: 400px;
+    }
+
+    .ecrit {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carte1 {
+        max-width: calc(50% - 10px);
+    }
+
+    .carte1 img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .photos1 {
+        max-width: 200px;
+    }
+
+    .commentaire {
+        max-width: 220px;
+    }
+
+    .menu-liens {
+        width: 80%;
+    }
+}
+
+/* ================================================
+   💻 TABLET - LANDSCAPE (769px - 992px)
+   ================================================ */
+@media (min-width: 769px) and (max-width: 992px) {
+    header {
+        padding: 0 30px;
+    }
+
+    .titre h1 {
+        font-size: 18px;
+    }
+
+    .liens {
+        gap: 15px;
+    }
+
+    .liens a {
+        font-size: 14px;
+    }
+
+    .affiche h1 {
+        font-size: 44px;
+    }
+
+    .affiche p {
+        font-size: 18px;
+    }
+
+    .button button {
+        width: 150px;
+    }
+
+    .histoir {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .images {
+        flex: 1;
+    }
+
+    .images img {
+        max-height: 500px;
+    }
+
+    .ecrit {
+        flex: 1;
+    }
+
+    .carte1 {
+        max-width: calc(33.33% - 15px);
+    }
+
+    .carte1 img {
+        height: auto;
+        max-height: 220px;
+    }
+
+    .photos {
+        min-height: 400px;
+    }
+
+    .photos1 {
+        max-width: 220px;
+        height: 280px;
+    }
+
+    .commentaire {
+        max-width: 250px;
+    }
+
+    .nous-contacter {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .menu-liens {
+        width: 70%;
+    }
+}
+
+/* ================================================
+   💻 LAPTOP (993px - 1200px)
+   ================================================ */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .titre {
+        font-size: 20px;
+    }
+
+    .affiche h1 {
+        font-size: 20px;
+    }
+
+    .carte1 {
+        max-width: calc(33.33% - 15px);
+    }
+
+    .photos1 {
+        max-width: 240px;
+        height: 300px;
+    }
+
+    .commentaire {
+        max-width: 270px;
+    }
+
+    .nous-contacter {
+        gap: 100px;
+    }
+
+    .menu-liens {
+        width: 60%;
+    }
+}
+
+/* ================================================
+   🖥️ DESKTOP (1201px - 1400px)
+   ================================================ */
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .titre {
+        font-size: 22px;
+    }
+
+    .affiche h1 {
+        font-size: 52px;
+    }
+
+    .carte1 {
+        max-width: calc(33.33% - 15px);
+    }
+
+    .photos1 {
+        max-width: 260px;
+        height: 320px;
+    }
+
+    .commentaire {
+        max-width: 280px;
+    }
+
+    .nous-contacter {
+        gap: 120px;
+    }
+
+    .menu-liens {
+        width: 50%;
+    }
+}
+
+/* ================================================
+   🖥️ LARGE DESKTOP (1401px+)
+   ================================================ */
+@media (min-width: 1401px) {
+    header {
+        padding: 0 40px;
+    }
+
+    .titre {
+        font-size: 30 px;
+    }
+
+    .liens a {
+        font-size: 16px;
+    }
+
+    .affiche h1 {
+        font-size: 60px;
+    }
+
+    .affiche p {
+        font-size: 20px;
+        max-width: 700px;
+    }
+
+    .button button {
+        width: 160px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .carte1 {
+        width: 350px;
+    }
+
+    .carte1 img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .photos {
+        min-height: 500px;
+    }
+
+    .photos1 {
+        max-width: 280px;
+        height: 350px;
+    }
+
+    .commentaire {
+        max-width: 300px;
+        min-height: 280px;
+    }
+
+    .nous-contacter {
+        gap: 150px;
+    }
+
+    .menu-liens {
+        width: 45%;
+    }
+
+    .Nous-ecrire {
+        max-width: 500px;
+    }
+}
+
+/* ================================================
+   ✨ AMÉLIORATION DE L'ACCESSIBILITÉ
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+    }
+
+    .ecrit p {
+        color: #ddd;
+    }
+
+    .commentaire {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+}
+/* ================================================
+   📐 GESTION DE L'ORIENTATION ET HAUTEUR D'ÉCRAN
+   ================================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+    .ecran {
+        height: 70vh;
+    }
+
+    header {
+        height: 45px;
+    }
+
+    main {
+        margin-top: 45px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="titre">
+            <h1>SAMUEL <span>Food</span></h1>
+        </div>
+        <div class="liens">
+            <a href="#acceuille">acceuille</a>
+            <a href="#A propos">A propos</a>
+            <a href="#Menu">Menu</a>
+            <a href="#galerie">galerie</a>
+            <a href="#avis">avis</a>
+            <a href="#contact">contact</a>
+        </div>
+    </header>
+    <!-- acceuille -->
+    <div class="ecran" id="acceuille">
+        <div class="affiche">
+            <h1>LES MEILLEUR BEURGEUR DE LA VIE</h1>
+            <p>decouvret les beurgeur artisanaux preparé avec des  </p><br>
+            <p>ingredient frais et locaux pour une experience gustative</p><br>
+            <p>inoubliable.</p>
+            <div class="button">
+                <a href="#Menu"><button class="menu">voir le menu</button></a>
+                <a href="#contact"><button class="contact">Nous contacter</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- notre histoire -->
+     <div class="histoir"id="A propos">
+        <div class="ecrit">
+            <h1>Notre histoire</h1>
+            <p>
+Fondé le 15 août 2006 à Brazzaville, Samuel Food est né d’une idée simple :
+proposer un repas rapide, délicieux et accessible à tous, dans une ambiance chaleureuse digne de la famille congolaise.
+ <br><br>
+Tout a commencé dans un petit local au quartier, avec seulement trois produits au menu :
+un burger maison, des frites croustillantes et un jus local fait sur place.
+Mais très vite, le goût unique et l’accueil chaleureux ont attiré les habitants du voisinage, puis des quartiers entiers.
+Le bouche-à-oreille a transformé Samuel Food en un véritable point de rencontre, où étudiants, travailleurs et familles venaient partager un bon repas.
+<br><br>
+Au fil des années, l’enseigne s’est modernisée :
+nouvelle cuisine, nouveaux chefs, nouveaux menus.
+Le burger Braza Spécial et le Milk-Shake Tropical sont rapidement devenus les favoris des clients.
+Samuel Food a su rester fidèle à ce qui faisait sa force :<br>
+des ingrédients frais, des portions généreuses et un service toujours souriant.
+<br><br>
+Aujourd’hui encore, après presque deux décennies d’existence, Samuel Food continue d’être une référence du fast-food à Brazzaville.
+Nous avons grandi, mais notre mission reste la même :
+servir le meilleur goût possible, comme à la maison, mais en version rapide.</p>
+        </div>
+
+        <div class="images">
+            <img src="4.jpeg">
+        </div>
+     </div>
+     <!-- notre menu -->
+   <section class="menu">
+        <div class="notre-titre"> <h1>NOTRE MENU </h1></div>
+        <div class="menu-liens">
+            <div class="liens2"><a href="">Tout</a></div>
+            <div class="liens2"> <a href="">Burgers</a></div>
+            <div class="liens2"><a href="">Accompagnement</a></div>
+            <div class="liens2"><a href="">Boissons</a></div>
+        </div>
+        <div class="carte-menu">
+            <div class="carte-menu">
+
+    <div class="carte1">
+            <a href="1.jpeg"><img src="1.jpeg"></a>
+        <h1>Burger Classique</h1>
+        <p>Un burger juteux avec laitue, tomate, oignon et sauce spéciale.</p>
+        <div class="commander">
+            <span>3000FCFA</span>
+             <button>Commander</button>
+        </div>
+    </div>
+
+    <div class="carte1">
+        <a href="2.jpeg"><img src="2.jpeg"></a>
+        <h1>Coca-Cola</h1>
+        <p>Une boisson savoureuse, à déguster en accompagnement.</p>
+        <div class="commander">
+             <span>2500FCFA</span>
+            <button>Commander</button>
+        
+        </div>
+    </div>
+
+    <div class="carte1">
+       <a href="3.jpeg"> <img src="3.jpeg"></a>
+        <h1>Burger Bacon</h1>
+        <p>Un burger gourmand avec bacon croustillant, fromage, laitue et tomate.</p>
+        <div class="commander">
+            <span>3500FCFA</span>
+            <button>Commander</button>
+            
+        </div>
+    </div>
+
+    <div class="carte1">
+        <a href="14.jpeg"><img src="14.jpeg"></a>
+        <h1>Nuggets de poulet</h1>
+        <p>6 pièces de nuggets croustillants accompagnes de sauce au choix.</p>
+        <div class="commander">
+            <span>3000FCFA</span>
+            <button>Commander</button>
+            
+        </div>
+    </div>
+
+    <div class="carte1">
+        <a href="15.jpeg"><img src="15.jpeg"></a>
+        <h1>sandwicht au poulet</h1>
+        <p>Un burger gourmand avec bacon croustillant, fromage, laitue et tomate.</p>
+        <div class="commander">
+            <span>2000FCFA</span>
+            <button>Commander</button>
+            
+        </div>
+    </div>
+
+    <div class="carte1">
+        <a href="16.jpeg"><img src="16.jpeg"></a>
+        <h1>Milk Shaks</h1>
+        <p>Savoureuse et delicieuse .</p>
+        <div class="commander">
+            <span>5000FCFA</span>
+            <button>Commander</button>
+            
+        </div>
+    </div>
+
+</div>
+    
+            </div>
+      </section>
+     
+  <!-- notre galerie -->
+      <section class="gallerie">
+    <div class="notre-titre">
+        <h1>NOTRE GALERIE</h1>
+    </div>
+
+    <div class="photos">
+        <div class="photos1">
+            <img src="img/2.jpeg">
+            <span>
+                <h2>Coca-Cola Bien Frais</h2>
+                <p>Une boisson pétillante et rafraîchissante servie glacée. Parfait pour accompagner tous vos plats et apporter une sensation de fraîcheur immédiate.</p>
+            </span>
+        </div>
+
+        <div class="photos1">
+            <img src="img/7.jpeg">
+            <span>
+                <h2>Burger Classique Premium</h2>
+                <p>Un burger généreux composé d’un steak juteux, d’une salade fraîche, de tomates croquantes, d’oignons fondants et d’une sauce spéciale maison qui relève parfaitement chaque bouchée.</p>
+            </span>
+        </div>
+        <div class="photos1">
+            <img src="img/16.jpeg">
+            <span>
+                <h2>Milkshake Crémeux</h2>
+                <p>Un milkshake onctueux, préparé avec du lait entier et de la crème glacée parfumée. Une boisson gourmande, douce et rafraîchissante, idéale pour une pause sucrée.</p>
+            </span>
+        </div>
+
+        <div class="photos1">
+            <img src="img/15.jpeg">
+            <span>
+                <h2>Londres</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </span>
+        </div>
+
+        <div class="photos1">
+            <img src="img/14.jpeg">
+            <span>
+                <h2>Nuggets de Poulet Maison</h2>
+                <p>Des nuggets préparés avec du poulet tendre, marinés puis panés pour un croustillant irrésistible. Servis chauds, dorés et pleins de saveur.</p>
+            </span>
+        </div>
+
+        <div class="photos1">
+            <img src="img/13.jpeg">
+            <span>
+                <h2>🍟 Frites Dorées et Croquantes</h2>
+                <p>Des frites savoureuses, croustillantes à l’extérieur et tendres à l’intérieur, salées juste comme il faut. L’accompagnement parfait pour tous vos menus.</p>
+            </span>
+        </div>
+
+
+    </div>
+</section>
+
+ 
+                <!-- Avis Clients -->
+
+    <div class="commentaire-client" id="avis">
+
+        <!-- Avis 1 -->
+        <div class="commentaire">
+            <div class="profil">
+                <a href="1.jpeg"><img src="1.jpeg" ></a>
+                <h3>Saitama</h3>
+            </div>
+
+            <div class="etoiles">
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+
+        <!-- Avis 2 -->
+        <div class="commentaire">
+            <div class="profil">
+                <a href="2.jpeg"><img src="2.jpeg"></a>
+                <h3>Fubuki</h3>
+            </div>
+
+            <div class="etoiles">
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+
+        <!-- Avis 3 -->
+        <div class="commentaire">
+            <div class="profil">
+                <a href="3.jpeg"><img src="3.jpeg"></a>
+                <h3>Samuel</h3>
+            </div>
+
+            <div class="etoiles">
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+   <!-- Nous contacter   -->
+
+   <section class="information">
+    <div class="notre-titre">
+        <h1>NOUS CONTACTER</h1>
+    </div>
+    <div class="nous-contacter">
+        <div class="contacte" id="contact">
+            <div class="Info">
+                <h2>adresse</h2>
+            <span><i class="fi fi-bs-marker"></i> 22 Rue Opagui</span>
+            </div>
+            <div class="Info">
+                <h2>Téléphone</h2>
+                <span><i class="fi fi-br-phone-call"></i>+242 06 957 94 03</span>
+            </div>
+            <div class="Info">
+                <h2>email</h2>
+                <span>samuelakombo0@gmail.com</span>
+            </div>
+            <div class="Info">
+                <h2>Heure d'ouverture</h2>
+                <span><i class="fi fi-rr-alarm-clock"></i> lundi au vendredi: 15h-30min a 5H-59min</span>
+            </div>
+            <div class="info">
+                <a href="https://wa.me/message/BII63IBIJALIN1" target="_blank" rel="noopener noreferrer"><div class="bnt2">
+                    <i class="fi fi-brands-whatsapp"></i>
+                </div></a>
+            </div>
+
+        </div>
+        <div class="Nous-ecrire">
+            <div class="titre2">
+                <h2>NOUS-ECRIRE</h2>
+            </div>
+            <form>
+                <input type="text" placeholder="votre nom" required>
+                <input type="email" placeholder="votre email" required>
+                <textarea placeholder="votre message" required></textarea>
+                <button type="submit">Envoyer un message</button>
+            </form>
+        </div>
+    </div>
+   </section>
+</body>
+</html>
